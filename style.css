@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+@font-face {
+    font-family: "Asleep";
+    src: url("./fonts/Asleepytiming.ttf") format("truetype");
+}
+
+*
+{
+    /* background-color: #1C1C1C; */
+    /* background-color: #191A2A; */
+    background-color: #212121
+}
+
+body {
+    color: white;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+clock {
+    position: relative;
+    top: 14vh;
+    color: rgb(149, 149, 149);
+    font-family: "Asleep";
+}
+
+.clockElement {
+    font-size: 8em;
+}
+
+.clockDivider {
+    font-family: "Roboto";
+    font-size: 8em;
+    color: #626262;
+}
+
+#topLayer {
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+}
+
+#searchBar {
+    position: relative;
+    top: 30vh;
+    color: rgb(149, 149, 149);
+    font-family: "Roboto", sans-serif;
+    font-size: 2.3em;
+    text-align: center;
+    border: 0px;
+    border-color: #1C1C1C;
+    border-block-color: #1C1C1C;
+}
