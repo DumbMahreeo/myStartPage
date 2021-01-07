@@ -101,16 +101,12 @@ document.addEventListener("keydown", function(event) {
     splitput = input.innerText.split(" ")
     splitput[0] = splitput[0] + " "
 
-    if (splitput.length == 1) {
-	    toCheck = /^\!.*/.exec(input.innerText)
-		    if (toCheck != null) {
-				input.innerHTML = "<span style=\"color: #626262;\">" + input.innerText + "</span>"
-		    }
-    } else {
-	    toCheck = /^\!.*/.exec(splitput[0]) 
-	    if (toCheck != null) {
-			input.innerHTML = "<span style=\"color: #626262;\">" + splitput[0] + "</span> " + splitput.slice(1).join(" ")
-	    }
+
+    toCheck = /^\!.*/.exec(input.innerText)
+    if (splitput.length==1 && toCheck!=null) {
+        input.innerHTML = "<span style=\"color: #626262;\">" + input.innerText + "</span>"
+    } else if (toCheck != null) {
+        input.innerHTML = "<span style=\"color: #626262;\">" + splitput[0] + "</span> " + splitput.slice(1).join(" ")
     }
 
 
